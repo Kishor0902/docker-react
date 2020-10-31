@@ -13,8 +13,8 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-west-2"
-  app: "locust-docker"
-  env: "LocustDocker-env"
+  app: "docker1"
+  env: "Docker1-env"
   bucket_name: "elasticbeanstalk-us-west-2-766975800445"
   on:
     branch: master
