@@ -1,9 +1,11 @@
 sudo: required
+language: generic
+
 services:
   - docker
 
 before_install:
   - docker build -t kjadhavaws/docker-react -f Dockerfile.dev .
 
-scripts:
-  - docker run kjadhavaws/docker-react npm run test -- --coverage
+script:
+  - docker run -e CI=true kjadhavaws/docker-react npm run test
